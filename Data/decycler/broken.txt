@@ -1,0 +1,3 @@
+# N: 83 Ncc: 9 M: 74
+# the graph is acyclic
+S 71 18 75
