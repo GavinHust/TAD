@@ -4,13 +4,12 @@
 ## Repo Contents
 - [Code](https://github.com/GavinHust/TAD/tree/main/Code): The source code in the paper.
 - [Data](https://github.com/GavinHust/TAD/tree/main/Data): The data in the paper mainly include the original network data, such as Synthetic network and Real network datasets, as well as the network dismantling result information data used to draw the result pictures in the paper.
-  - [Synthetic](https://github.com/GavinHust/TAD/tree/main/Data): The synthetic networks used in the paper, where [ER](https://github.com/GavinHust/TAD/tree/main/Data) includes ER networks, [SF](https://github.com/GavinHust/TAD/tree/main/Data) includes scale-free networks, and [F](https://github.com/GavinHust/TAD/tree/main/Data) includes ER networks and SF networks with different initial values of F.
-  - [Real](https://github.com/GavinHust/TAD/tree/main/Data): The 15 real networks used in the paper
-  - [DNdata](https://github.com/GavinHust/TAD/tree/main/Data): The network dismantling information of different methods used to draw the result images in the paper, including data in .npy format and .csv format.
-  - [Otherdata](https://github.com/GavinHust/TAD/tree/main/Data): Other data generated during the experiment.
+  - [Synthetic](https://github.com/GavinHust/TAD/tree/main/Data/Synthetic): The synthetic networks used in the paper, where [ER](https://github.com/GavinHust/TAD/tree/main/Data/Synthetic/ER) includes ER networks, [SF](https://github.com/GavinHust/TAD/tree/main/Data/Synthetic/SF) includes scale-free networks, and [F](https://github.com/GavinHust/TAD/tree/main/Data/Synthetic/F) includes ER networks and SF networks with different initial values of F.
+  - [Real](https://github.com/GavinHust/TAD/tree/main/Data/Real): The 15 real networks used in the paper
+  - [DNdata](https://github.com/GavinHust/TAD/tree/main/Data/DNdata): The network dismantling information of different methods used to draw the result images in the paper, including data in .npy format and .csv format.
+  - Otherdata: Other data generated during the experiment.
 
-## System Requirements
-### Software Dependencies
+## Software Dependencies
 Users should first install the following software packages in the virtual environment of python3.7. The version of the software, specifically, is:
 ```
 matplotlib==3.5.1
@@ -29,11 +28,11 @@ pip install -r requirements.txt
 
 ## Instructions to run
 1. The generation of the synthetic network can refer to the following code file:
-  - [get_SF_ER_graph.py](https://github.com/GavinHust/TAD/tree/main/Data): Generate SF networks with different power-law exponents and ER networks with different average degree values.
-  - [get_F_ER_network.py](https://github.com/GavinHust/TAD/tree/main/Data): Generate ER networks with different initial values of F.
-  - [get_F_SF_network.py](https://github.com/GavinHust/TAD/tree/main/Data): Generate SF networks with different initial values of F.
+  - [get_SF_ER_graph.py](https://github.com/GavinHust/TAD/blob/main/Code/get_SF_ER_graph.py): Generate SF networks with different power-law exponents and ER networks with different average degree values.
+  - [get_F_ER_network.py](https://github.com/GavinHust/TAD/blob/main/Code/get_F_ER_network.py): Generate ER networks with different initial values of F.
+  - [get_F_SF_network.py](https://github.com/GavinHust/TAD/blob/main/Code/get_F_SF_network.py): Generate SF networks with different initial values of F.
 
-2. Generate the data of GSCC for each step of network dismantling using synthetic networks and real networks. You can modify the hyperparameters in the code [TAD_analysis.py](https://github.com/GavinHust/TAD/tree/main/Data) to dismantle different networks, including "ER", "SF", "F_ER", "F_SF" and "real".
+2. Generate the data of GSCC for each step of network dismantling using synthetic networks and real networks. You can modify the hyperparameters in the code [TAD_analysis.py](https://github.com/GavinHust/TAD/blob/main/Code/TAD_analysis.py) to dismantle different networks, including "ER", "SF", "F_ER", "F_SF" and "real".
 ```
 python TAD_analysis.py
 ```
@@ -53,3 +52,7 @@ python draw_fig4.py
 ```
 python draw_real.py
 ```
+
+# Reference
+
+Please cite our work if you find our code/paper is useful to your work. 
