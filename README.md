@@ -1,0 +1,55 @@
+# Optimal dismantling of directed networks
+
+
+## Repo Contents
+- [Code](https://github.com/GavinHust/TAD/tree/main/Code): The source code in the paper.
+- [Data](https://github.com/GavinHust/TAD/tree/main/Data): The data in the paper mainly include the original network data, such as Synthetic network and Real network datasets, as well as the network dismantling result information data used to draw the result pictures in the paper.
+  - [Synthetic](https://github.com/GavinHust/TAD/tree/main/Data): The synthetic networks used in the paper, where [ER](https://github.com/GavinHust/TAD/tree/main/Data) includes ER networks, [SF](https://github.com/GavinHust/TAD/tree/main/Data) includes scale-free networks, and [F](https://github.com/GavinHust/TAD/tree/main/Data) includes ER networks and SF networks with different initial values of F.
+  - [Real](https://github.com/GavinHust/TAD/tree/main/Data): The 15 real networks used in the paper
+  - [DNdata](https://github.com/GavinHust/TAD/tree/main/Data): The network dismantling information of different methods used to draw the result images in the paper, including data in .npy format and .csv format.
+  - [Otherdata](https://github.com/GavinHust/TAD/tree/main/Data): Other data generated during the experiment.
+
+## System Requirements
+### Software Dependencies
+Users should first install the following software packages in the virtual environment of python3.7. The version of the software, specifically, is:
+```
+matplotlib==3.5.1
+networkx==2.6.3
+numpy==1.21.6
+powerlaw==1.5
+scipy==1.7.3
+seaborn==0.13.2
+torch==1.13.1+cu116
+torch_geometric==2.3.1
+```
+We also provide the requirement.txt, and users can simply install it through the following command:
+```
+pip install -r requirements.txt
+```
+
+## Instructions to run
+1. The generation of the synthetic network can refer to the following code file:
+  - [get_SF_ER_graph.py](https://github.com/GavinHust/TAD/tree/main/Data): Generate SF networks with different power-law exponents and ER networks with different average degree values.
+  - [get_F_ER_network.py](https://github.com/GavinHust/TAD/tree/main/Data): Generate ER networks with different initial values of F.
+  - [get_F_SF_network.py](https://github.com/GavinHust/TAD/tree/main/Data): Generate SF networks with different initial values of F.
+
+2. Generate the data of GSCC for each step of network dismantling using synthetic networks and real networks. You can modify the hyperparameters in the code [TAD_analysis.py](https://github.com/GavinHust/TAD/tree/main/Data) to dismantle different networks, including "ER", "SF", "F_ER", "F_SF" and "real".
+```
+python TAD_analysis.py
+```
+3. Test the dismantling performance of the ER and SF networks, and draw fig2 in the paper.
+```
+python draw_fig2.py
+```
+4. Draw avalanche diagrams of different dismantling methods, and draw fig3 in the paper.
+```
+python draw_fig3.py
+```
+5. Test the dismantling performance of ER and SF networks with different initial values of F, and draw fig4 in the paper.
+```
+python draw_fig4.py
+```
+5. Test real data, and draw fig5 and fig6 in the paper.
+```
+python draw_real.py
+```
