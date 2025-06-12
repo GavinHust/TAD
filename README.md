@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ```
 
 ## Instructions to run
-1. The generation of the synthetic network can refer to the following code file:
+1. The generation of the synthetic network for subsequent testing can refer to the following code file, Or of course, you can also use the synthetic network and the real network we have provided for subsequent testing.
   - [get_SF_ER_graph.py](https://github.com/GavinHust/TAD/blob/main/Code/get_SF_ER_graph.py): Generate SF networks with different power-law exponents and ER networks with different average degree values.
   - [get_F_ER_network.py](https://github.com/GavinHust/TAD/blob/main/Code/get_F_ER_network.py): Generate ER networks with different initial values of F.
   - [get_F_SF_network.py](https://github.com/GavinHust/TAD/blob/main/Code/get_F_SF_network.py): Generate SF networks with different initial values of F.
