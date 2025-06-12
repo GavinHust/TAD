@@ -48,7 +48,7 @@ python draw_fig3.py
 ```
 python draw_fig4.py
 ```
-5. Test real data, and draw fig5 and fig6 in the paper.
+6. Test real data, and draw fig5 and fig6 in the paper.
 ```
 python draw_real.py
 ```
