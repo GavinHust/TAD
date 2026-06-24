@@ -55,4 +55,4 @@ python draw_real.py
 
 # Reference
 
-Please cite our work(https://doi.org/10.1038/s41467-026-74467-1) if you find our code/paper is useful to your work. 
+Please cite our work( https://doi.org/10.1038/s41467-026-74467-1 ) if you find our code/paper is useful to your work. 
