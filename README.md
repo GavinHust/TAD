@@ -56,7 +56,7 @@ python draw_real.py
 # Reference
 
 Please cite our work( https://doi.org/10.1038/s41467-026-74467-1 ) if you find our code/paper is useful to your work. 
-'''
+```
 @article{Liu2026OptimalDismantling,
   author = {Liu, Xueming and Hu, Jiawen and Wang, Yumei and Liu, Yang-Yu and Zhang, Hai-Tao},
   title = {Optimal dismantling of directed networks},
@@ -64,4 +64,4 @@ Please cite our work( https://doi.org/10.1038/s41467-026-74467-1 ) if you find o
   year = {2026},
   doi = {10.1038/s41467-026-74467-1}
 }
-'''
+```
